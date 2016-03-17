@@ -1,0 +1,11 @@
+footer {
+	text-align: center;
+	color: #e6e6e6;
+	background-color: rgb(19, 19, 19);
+	padding: 3rem 0;
+
+	@media screen and (min-width: 860px) {
+			position: relative;
+			z-index: 1000;
+	}
+}
