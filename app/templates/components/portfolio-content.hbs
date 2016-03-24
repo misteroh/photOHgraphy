@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>
+        {{model.category}}
+    </h2>
+
+    <ul class='imageList'>
+        {{#each model.images as |image|}}
+            <li class='imageList_item'>
+                <a href='assets/images/{{model.category}}/{{image.src}}'>
+                    <img class='imageList_image' src='assets/images/{{model.category}}/thumb/{{image.src}}' />
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+</div>

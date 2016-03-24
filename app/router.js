@@ -6,7 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('portfolio', { path: '/portfolio/:category' });
+  this.route('portfolio', { path: '/:category' });
 });
 
 export default Router;

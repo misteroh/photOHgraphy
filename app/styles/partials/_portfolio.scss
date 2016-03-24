@@ -1,0 +1,19 @@
+.imageList {
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.imageList_item {
+	width: 16.66%;
+}
+
+.imageList_image {
+	width: 100%;
+}
+
+.portfolio_content {
+	min-height: 900px;
+	padding-top: 8rem;
+}

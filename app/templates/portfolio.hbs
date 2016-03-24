@@ -1,1 +1,37 @@
-{{outlet}}
+<div class="container">
+    {{#link-to 'index'}}
+        Home
+    {{/link-to}}
+</div>
+
+<nav>
+    <div class="container">
+        <h1>Portfolio</h1>
+
+        {{#each model.categories as |category|}}
+            {{#link-to 'portfolio' category.name class='nav_link'}}
+                {{category.name}}
+            {{/link-to}}
+        {{/each}}
+    </div>
+</nav>
+
+{{#liquid-bind model enableGrowth=false use='fade' as |currentModel|}}
+    <section class="portfolio_content">
+        <div class="container">
+            <h2>
+                {{currentModel.category}}
+            </h2>
+
+            <ul class='imageList'>
+                {{#each currentModel.images as |image|}}
+                    <li class='imageList_item'>
+                        <a href='assets/images/{{currentModel.category}}/{{image.src}}'>
+                            <img class='imageList_image' src='assets/images/{{currentModel.category}}/thumb/{{image.src}}' />
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+{{/liquid-bind}}

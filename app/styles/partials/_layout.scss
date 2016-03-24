@@ -26,7 +26,17 @@ section {
 .section_header {
 	margin: 0 auto 5rem;
 	font-family: 'Economica', sans-serif;
-	font-size: 5rem;
+	font-size: 6rem;
+	text-align: center;
+
+	&:after {
+		content: '';
+		width: 14rem;
+		height:1px;
+		margin: 2rem auto;
+		background: white;
+		display: block;
+	}
 }
 
 .work {
@@ -42,8 +52,11 @@ section {
 }
 
 .work_item {
-	width: 49.5%;
 	margin-bottom: 1rem;
+
+	@media screen and (min-width: $md) {
+		width: 49.5%;
+	}
 }
 
 .work_figure {
@@ -53,9 +66,12 @@ section {
 .work_image {
 	max-width: 100%;
 	-webkit-filter: grayscale(100%);
+	opacity: 0.5;
+	transition: opacity ease-out 0.5s;
 
 	.work_item:hover & {
 		-webkit-filter: grayscale(0%);
+		opacity: 1;
 	}
 }
 
@@ -67,7 +83,8 @@ section {
 	display: flex;
     align-items: center;
 	// background: rgba(0,0,0,0.5);
-	font-size: 6rem;
+	font-size: 8rem;
+	text-transform: uppercase;
 	text-align: center;
 	opacity: 0;
 	transition: opacity ease-out 0.5s;
@@ -77,8 +94,11 @@ section {
 	}
 
 	> a {
+	    width: 100%;
 		display: block;
 		color: white;
+		font-family: 'Economica', sans-serif;
+
 
 		&:hover {
 			text-decoration: none;
@@ -88,6 +108,8 @@ section {
 
 section.aboutMe {
 	background: #555;
+	font-family: 'Slabo 27px', serif;
+	font-size: 1.5rem;
 }
 
 
