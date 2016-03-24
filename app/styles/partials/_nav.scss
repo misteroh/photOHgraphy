@@ -1,0 +1,21 @@
+nav {
+	width: 100%;
+	padding: 2rem 0;
+	// position: fixed;
+	background: #222;
+    z-index: 9;
+
+	h1 {
+		margin-bottom: 3rem;
+	}
+}
+
+.nav_link {
+	padding: 2rem 3rem;
+	margin: 2rem 5rem 0 0;
+	background: #111;
+
+	&:hover {
+		background: #000;
+	}
+}
