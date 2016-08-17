@@ -4,10 +4,8 @@
     {{/link-to}}
 </div>
 
-<nav>
+<nav class='portfolio-nav'>
     <div class="container">
-        <h1>Portfolio</h1>
-
         {{#each model.categories as |category|}}
             {{#link-to 'portfolio' category.name class='nav_link'}}
                 {{category.name}}
@@ -19,9 +17,9 @@
 {{#liquid-bind model enableGrowth=false use='fade' as |currentModel|}}
     <section class="portfolio_content">
         <div class="container">
-            <h2>
+            <h1>
                 {{currentModel.category}}
-            </h2>
+            </h1>
 
             <ul class='imageList'>
                 {{#each currentModel.images as |image|}}
